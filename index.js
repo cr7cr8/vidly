@@ -4,17 +4,17 @@ const config = require("config");
 const app = express();
 
 
-app.get("/",(req,res)=>{
-  res.send("test")
-})
+// app.get("/",(req,res)=>{
+//   res.send("test")
+// })
 
 
-// require("./startup/logging")();
-// require("./startup/cors")(app);
-// require("./startup/routes")(app);
-// require("./startup/db")();
-// require("./startup/config")();
-// require("./startup/validation")();
+require("./startup/logging")();
+require("./startup/cors")(app);
+require("./startup/routes")(app);
+require("./startup/db")();
+require("./startup/config")();
+require("./startup/validation")();
 
 
 console.log(process.env.NODE_ENV === undefined)
